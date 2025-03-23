@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "font-awesome": "^4.7.0",
     "login": "^0.8.0",
     "travis": "^0.1.1",
     "vue": "^3.2.13",

@@ -9,7 +9,6 @@
   <router-link to="/" class="link">Home</router-link>
   <router-link to="/projects" class="link">Projects</router-link>
   <router-link to="/contact" class="link">Contact</router-link>
-  <router-link to="/about" class="link">test</router-link>
 </ul>
 
     </nav>

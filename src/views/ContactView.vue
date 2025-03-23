@@ -1,103 +1,199 @@
 <template>
-    <header>
+  <header>
     <nav>
       <div class="nav-logo">
         <h1>Portfolio.</h1>
       </div>
-
-<ul class="nav-links">
-  <router-link to="/" class="link">Home</router-link>
-  <router-link to="/projects" class="link">Projects</router-link>
-  <router-link to="/contact" class="link">Contact</router-link>
-</ul>
+      <ul class="nav-links">
+        <router-link to="/" class="link">Home</router-link>
+        <router-link to="/projects" class="link">Projects</router-link>
+        <router-link to="/contact" class="link">Contact</router-link>
+      </ul>
     </nav>
-    </header>
+  </header>
 
-<div class="email-form">
-  <form ref="form" @submit.prevent="sendEmail">
-      <label>Name</label>
-      <input type="text" name="user_name" required />
-      <label>Email</label>
-      <input type="email" name="user_email" required />
-      <label>Message</label>
-      <textarea name="message" required></textarea>
-      <button class="submit-btn" type="submit">{{ buttonText }}</button>
-    </form>
-</div>
-  </template>
+  <section class="contact">
+    <div class="container">
+      <h1>Contact me!</h1>
+      <p class="subtext">Best way to reach me is through Email, but if other sources are better for you, feel free to contact me there.</p>
+
+      <div class="icons">
+        <!-- Email Icon -->
+        <div class="icon" @click="openModal('email')">
+          <i class="fas fa-envelope fa-4x email-icon"></i> <!-- Larger icon size -->
+        </div>
+
+        <!-- Facebook Icon -->
+        <div class="icon" @click="openModal('facebook')">
+          <i class="fab fa-facebook fa-4x facebook-icon"></i> <!-- Larger icon size -->
+        </div>
+
+        <!-- X (Twitter) Icon -->
+        <div class="icon" @click="openModal('x')">
+          <i class="fab fa-twitter fa-4x twitter-icon"></i> <!-- Larger icon size -->
+        </div>
+
+        <!-- Instagram Icon -->
+        <div class="icon" @click="openModal('instagram')">
+          <i class="fab fa-instagram fa-4x instagram-icon"></i> <!-- Larger icon size -->
+        </div>
+
+        <!-- GitHub Icon -->
+        <div class="icon" @click="openModal('github')">
+          <i class="fab fa-github fa-4x github-icon"></i> <!-- Larger icon size -->
+        </div>
+      </div>
+
+      <!-- Modal Popup -->
+      <div v-if="modalOpen" class="modal-overlay" @click.self="closeModal">
+        <div class="modal-content">
+          <button class="close-btn" @click="closeModal">X</button>
+          <h2>Contact via {{ activeIcon }}</h2>
+          <p v-if="activeIcon === 'email'">Email: <a href="mailto:j.rinzen@live.se">j.rinzen@live.se</a></p>
+          <p v-if="activeIcon === 'facebook'">Facebook: <a href="https://www.facebook.com/" target="_blank">Myprofile</a></p>
+          <p v-if="activeIcon === 'x'">Twitter: <a href="https://twitter.com/" target="_blank">@Myprofile</a></p>
+          <p v-if="activeIcon === 'instagram'">Instagram: <a href="https://www.instagram.com/" target="_blank">Myprofile</a></p>
+          <p v-if="activeIcon === 'github'">GitHub: <a href="https://github.com/snoow17" target="_blank">Snoow17</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
 
 <script>
-import emailjs from '@emailjs/browser';
-
-
 export default {
   data() {
     return {
-      buttonText: 'Send',
+      activeIcon: null,
+      modalOpen: false,
     };
   },
   methods: {
-    sendEmail() {
-
-this.buttonText = 'Message has been sent!';
-
-      emailjs
-        .sendForm('j.rinzen@live.se', 'template_kfjqizo', this.$refs.form, {
-          publicKey: 'jpwILXbcI8hkDusag',
-        })
-        .then(
-          () => {
-            console.log('SUCCESS!');
-
-            this.$refs.form.reset();
-            setTimeout(() => {
-              this.buttonText = 'Send';
-            }, 5000);
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-
-            this.buttonText = 'Send';
-          },
-        );
+    openModal(icon) {
+      this.activeIcon = icon;
+      this.modalOpen = true;
+    },
+    closeModal() {
+      this.modalOpen = false;
+      this.activeIcon = null;
     },
   },
 };
 </script>
 
 <style scoped>
-
-.email-form {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+.contact {
+  text-align: center;
+  padding: 50px 0;
 }
 
-.email-form input, .email-form textarea {
+h1 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.subtext {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.icons {
   display: flex;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
-  width: 100%;
-  padding: 10px;
-  margin: 20px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
-.email-form button {
-  padding: 10px 20px;
-  background-color: #007bff;
+.icon {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.icon-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.icon-info i {
+  margin-bottom: 5px;
+}
+
+.icon-info p {
+  font-size: 1rem;
+}
+
+.icon-info a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.icon-info a:hover {
+  text-decoration: underline;
+}
+
+/* Icon color styles */
+.email-icon {
+  color: #0073e6; /* Blue color for email */
+}
+
+.facebook-icon {
+  color: #3b5998; /* Facebook Blue */
+}
+
+.twitter-icon {
+  color: #1DA1F2; /* Twitter Blue */
+}
+
+.instagram-icon {
+  color: #E4405F; /* Instagram Red */
+}
+
+.github-icon {
+  color: #333; /* GitHub Black */
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.close-btn {
+  background-color: #ff4b5c;
   color: white;
   border: none;
-  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
   cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
-.email-form button:hover {
-  background-color: #0056b3;
+.close-btn:hover {
+  background-color: #ff2a34;
 }
-
-
 </style>
