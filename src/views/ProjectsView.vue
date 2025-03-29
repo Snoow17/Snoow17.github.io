@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <!-- Modal for Larger Image and Additional Pictures -->
+    
     <div v-if="isModalVisible" class="modal-overlay" @click="closeModal">
       <div class="modal" @click.stop>
         <div class="modal-main-image">
@@ -41,7 +41,7 @@
           <p>{{ selectedImage.info }}</p>
         </div>
 
-        <!-- Additional Images -->
+        
         <div class="modal-additional-images">
           <h3>More Images</h3>
           <div class="additional-images">
@@ -87,7 +87,7 @@ export default {
       images: [
         {
           src: require('@/assets/SQL/SQLlogo.jpg'), 
-          alt: 'Logo 1', 
+          alt: 'SQL', 
           info: 'I learned how to create SQL Databases and we made a library application with it that tracks books, borrowers and loans.',
           additionalImages: [
             { src: require('@/assets/SQL/Books.png'), alt: 'Logo 1 - A' },
@@ -98,7 +98,7 @@ export default {
         },
         {
           src: require('@/assets/logo.png'), 
-          alt: 'Logo 2', 
+          alt: 'Vue.JS', 
           info: 'My first Vue project during studies were we made a Calculator, a Clock, a Counter, a Dice and some FAQ. Buttons are pressable and FAQ can show/hide answers.',
           additionalImages: [
             { src: require('@/assets/FirstVue/CalcView.png'), alt: 'Logo 2 - A' },
@@ -116,7 +116,7 @@ export default {
         },
         {
           src: require('@/assets/Fizzbuzz/Logo.jpg'), 
-          alt: 'Logo 3', 
+          alt: 'Fizzbuzz', 
           info: 'Fizzbuzz project. Prints fizz, buzz or fizzbuzz in console if numbers are devided with the right property.',
           additionalImages: [
             { src: require('@/assets/Fizzbuzz/FizzbuzzCode.png'), alt: 'Logo 3 - A' },
@@ -125,7 +125,7 @@ export default {
         },
         {
           src: require('@/assets/TicTacToe/Logo.png'), 
-          alt: 'Logo 4', 
+          alt: 'TicTacToe', 
           info: 'Tictactoe in console window.',
           additionalImages: [
             { src: require('@/assets/TicTacToe/Code1.png'), alt: 'Logo 4 - A' },

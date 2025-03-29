@@ -18,33 +18,33 @@
       <p class="subtext">Best way to reach me is through Email, but if other sources are better for you, feel free to contact me there.</p>
 
       <div class="icons">
-        <!-- Email Icon -->
+
         <div class="icon" @click="openModal('email')">
-          <i class="fas fa-envelope fa-4x email-icon"></i> <!-- Larger icon size -->
+          <i class="fas fa-envelope fa-4x email-icon"></i> 
         </div>
 
-        <!-- Facebook Icon -->
+        
         <div class="icon" @click="openModal('facebook')">
-          <i class="fab fa-facebook fa-4x facebook-icon"></i> <!-- Larger icon size -->
+          <i class="fab fa-facebook fa-4x facebook-icon"></i> 
         </div>
 
-        <!-- X (Twitter) Icon -->
+        
         <div class="icon" @click="openModal('x')">
-          <i class="fab fa-twitter fa-4x twitter-icon"></i> <!-- Larger icon size -->
+          <i class="fab fa-twitter fa-4x twitter-icon"></i> 
         </div>
 
-        <!-- Instagram Icon -->
+        
         <div class="icon" @click="openModal('instagram')">
-          <i class="fab fa-instagram fa-4x instagram-icon"></i> <!-- Larger icon size -->
+          <i class="fab fa-instagram fa-4x instagram-icon"></i> 
         </div>
 
-        <!-- GitHub Icon -->
+        
         <div class="icon" @click="openModal('github')">
-          <i class="fab fa-github fa-4x github-icon"></i> <!-- Larger icon size -->
+          <i class="fab fa-github fa-4x github-icon"></i> 
         </div>
       </div>
 
-      <!-- Modal Popup -->
+      
       <div v-if="modalOpen" class="modal-overlay" @click.self="closeModal">
         <div class="modal-content">
           <button class="close-btn" @click="closeModal">X</button>
