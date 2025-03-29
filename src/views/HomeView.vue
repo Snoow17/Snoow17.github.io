@@ -33,7 +33,6 @@
     <div class="row">
       <div class="section-title">
         <h1>About me</h1>
-        <p class="small-text-upper"> Information About Me</p>
       </div>
     </div>
   </div>
@@ -42,7 +41,7 @@
   <div class="about-content">
     <div class="row align-item-center">
       <div class="text">
-        <h4>I'm Jerry Rinzen</h4>
+        <h4>My name is Jerry Rinzen</h4>
         <h6>A <span>Back/Frontend Student</span> based in <span>Sweden</span></h6>
         <p>I'm currently a student learning programing wich is very fun and challenging. So far frontend seems most fun because you get a visual view of what your code can do.</p>
 
