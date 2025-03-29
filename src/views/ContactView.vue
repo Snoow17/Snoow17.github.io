@@ -138,28 +138,28 @@ h1 {
   text-decoration: underline;
 }
 
-/* Icon color styles */
+
 .email-icon {
-  color: #0073e6; /* Blue color for email */
+  color: #0073e6; 
 }
 
 .facebook-icon {
-  color: #3b5998; /* Facebook Blue */
+  color: #3b5998; 
 }
 
 .twitter-icon {
-  color: #1DA1F2; /* Twitter Blue */
+  color: #1DA1F2; 
 }
 
 .instagram-icon {
-  color: #E4405F; /* Instagram Red */
+  color: #E4405F; 
 }
 
 .github-icon {
-  color: #333; /* GitHub Black */
+  color: #333; 
 }
 
-/* Modal styles */
+
 .modal-overlay {
   position: fixed;
   top: 0;
