@@ -12,21 +12,25 @@
     </nav>
   </header>
 
-  <section class="contact">
-    <div class="container">
-      <h1>Contact me!</h1>
-      <p class="subtext">Best way to reach me is through Email, but if other sources are better for you, feel free to contact me there.</p>
+  <section class="contact" id="contact">
+  <div class="container">
+    <div class="row full-screen">
+      <div class="contact-content">
+        <div class="block">
+          <div class="container">
+          <h1>Contact me!</h1>
+          <p class="subtext">Best way to reach me is through Email, but if other sources are better for you, feel free to contact me there.</p>
 
-      <div class="icons">
+          <div class="icons">
 
-        <div class="icon" @click="openModal('email')">
+          <div class="icon" @click="openModal('email')">
           <i class="fas fa-envelope fa-4x email-icon"></i> 
-        </div>
+          </div>
 
         
-        <div class="icon" @click="openModal('facebook')">
+          <div class="icon" @click="openModal('facebook')">
           <i class="fab fa-facebook fa-4x facebook-icon"></i> 
-        </div>
+         </div>
 
         
         <div class="icon" @click="openModal('x')">
@@ -57,7 +61,11 @@
         </div>
       </div>
     </div>
-  </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </template>
 
 <script>
@@ -82,15 +90,22 @@ export default {
 </script>
 
 <style scoped>
-.contact {
-  text-align: center;
-  padding: 50px 0;
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 20px 5%;
+  z-index: 100;
+  background-color: var(--background-color);
+  box-shadow: 0 4px 8px var(--box-shadow);
 }
 
-h1 {
-  font-size: 5rem;
-  margin-bottom: 20px;
-  color: white;
+.contact .contact-content .block h1 {
+  color: var(--text-color);
+    font-size: 85px;
+    font-weight: 700;
+    margin: 0;
+    padding: 15px;
 }
 
 .subtext {
