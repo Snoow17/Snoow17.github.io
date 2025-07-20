@@ -104,14 +104,14 @@ export default {
             { src: require('@/assets/FirstVue/CalcView.png'), alt: 'Logo 2 - A' },
             { src: require('@/assets/FirstVue/CalcVue.png'), alt: 'Logo 2 - B' },
             { src: require('@/assets/FirstVue/ClockView.png'), alt: 'Logo 2 - C' },
-            { src: require('@/assets/FirstVue/ClockVue.png'), alt: 'Logo 2 - C' },
-            { src: require('@/assets/FirstVue/CounterComponent.png'), alt: 'Logo 2 - C' },
-            { src: require('@/assets/FirstVue/CountersView.png'), alt: 'Logo 2 - C' },
-            { src: require('@/assets/FirstVue/CountersVue.png'), alt: 'Logo 2 - C' },
-            { src: require('@/assets/FirstVue/DiceView.png'), alt: 'Logo 2 - C' },
-            { src: require('@/assets/FirstVue/DiceVue.png'), alt: 'Logo 2 - C' },
-            { src: require('@/assets/FirstVue/FAQView.png'), alt: 'Logo 2 - C' },
-            { src: require('@/assets/FirstVue/FAQVue.png'), alt: 'Logo 2 - C' }
+            { src: require('@/assets/FirstVue/ClockVue.png'), alt: 'Logo 2 - D' },
+            { src: require('@/assets/FirstVue/CounterComponent.png'), alt: 'Logo 2 - E' },
+            { src: require('@/assets/FirstVue/CountersView.png'), alt: 'Logo 2 - F' },
+            { src: require('@/assets/FirstVue/CountersVue.png'), alt: 'Logo 2 - G' },
+            { src: require('@/assets/FirstVue/DiceView.png'), alt: 'Logo 2 - H' },
+            { src: require('@/assets/FirstVue/DiceVue.png'), alt: 'Logo 2 - IC' },
+            { src: require('@/assets/FirstVue/FAQView.png'), alt: 'Logo 2 - J' },
+            { src: require('@/assets/FirstVue/FAQVue.png'), alt: 'Logo 2 - K' }
           ]
         },
         {
@@ -133,6 +133,29 @@ export default {
             { src: require('@/assets/TicTacToe/Game.png'), alt: 'Logo 4 - c' }
           ]
         },
+        {
+          src: require('@/assets/SocialMedia/Index.png'),
+          alt: 'SocialMedia',
+          info: 'SocialMediaBroadcast. Create an account and post broadcasts to other users who chooses to "Listen" to you.',
+          additionalImages: [
+            { src: require('@/assets/SocialMedia/Register.png'), alt: 'Logo 5 - A'},
+            { src: require('@/assets/SocialMedia/LogIn.png'), alt: 'Logo 5 - B'},
+            { src: require('@/assets/SocialMedia/Explore.png'), alt: 'Logo 5 - C'},
+            { src: require('@/assets/SocialMedia/ExploreModal.png'), alt: 'Logo 5 - D'},
+            { src: require('@/assets/SocialMedia/HomeControllerTopBroadcasts.png'), alt: 'Logo 5 - E'},
+            { src: require('@/assets/SocialMedia/ProfileControllerProfileImg.png'), alt: 'Logo 5 - F'},
+            { src: require('@/assets/SocialMedia/SearchUser.png'), alt: 'Logo 5 - G'},
+            { src: require('@/assets/SocialMedia/SearchUserModal.png'), alt: 'Logo 5 - H'},
+            { src: require('@/assets/SocialMedia/TopBroadcasts.png'), alt: 'Logo 5 - I'},
+            { src: require('@/assets/SocialMedia/UserControllerExplore.png'), alt: 'Logo 5 - J'},
+            { src: require('@/assets/SocialMedia/UserControllerGetUserModal.png'), alt: 'Logo 5 - K'},
+            { src: require('@/assets/SocialMedia/UserControllerToggleListen.png'), alt: 'Logo 5 - L'},
+            { src: require('@/assets/SocialMedia/UserProfile.png'), alt: 'Logo 5 - M'},
+            { src: require('@/assets/SocialMedia/ViewsHomeIndex.png'), alt: 'Logo 5 - N'},
+            { src: require('@/assets/SocialMedia/ViewsHomeIndex2.png'), alt: 'Logo 5 - O'},
+            { src: require('@/assets/SocialMedia/ViewsHomeIndex3.png'), alt: 'Logo 5 - P'}
+          ]
+        }
         // Add more images here
       ]
     };
