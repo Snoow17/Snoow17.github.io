@@ -149,7 +149,6 @@ export default {
             { src: require('@/assets/SocialMedia/TopBroadcasts.png'), alt: 'Logo 5 - I'},
             { src: require('@/assets/SocialMedia/UserControllerExplore.png'), alt: 'Logo 5 - J'},
             { src: require('@/assets/SocialMedia/UserControllerGetUserModal.png'), alt: 'Logo 5 - K'},
-            { src: require('@/assets/SocialMedia/UserControllerToggleListen.png'), alt: 'Logo 5 - L'},
             { src: require('@/assets/SocialMedia/UserProfile.png'), alt: 'Logo 5 - M'},
             { src: require('@/assets/SocialMedia/ViewsHomeIndex.png'), alt: 'Logo 5 - N'},
             { src: require('@/assets/SocialMedia/ViewsHomeIndex2.png'), alt: 'Logo 5 - O'},
